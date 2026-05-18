@@ -113,3 +113,56 @@ footer {
     color: #777;
     padding: 20px;
 }
+
+/* =========================================
+   DESIGN RESPONSIVO (MOBILE E TABLETS)
+   ========================================= */
+
+@media (max-width: 768px) {
+    
+    /* 1. Ajustando o Cabeçalho */
+    header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 0; /* Remove a margem lateral antiga */
+    }
+
+    /* 2. Ajustando a Seção "Os Artesãos" (Hero) */
+    .hero {
+        flex-direction: column; /* Empilha a foto e o texto */
+        text-align: center;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .hero-img {
+        width: 100%; /* A imagem ocupa 100% da tela disponível */
+        max-width: 400px; /* Mas não passa de 400px para não ficar gigante */
+    }
+
+    /* 3. Ajustes gerais de espaçamento */
+    section {
+        padding: 40px 15px; /* Reduz o espaço nas laterais em telas pequenas */
+    }
+
+    #contato {
+        padding: 30px 15px;
+    }
+
+    .btn-whatsapp-sm {
+        width: 100%; /* Botões da galeria ficam mais largos para facilitar o toque de dedo */
+        padding: 12px;
+    }
+}
