@@ -3,53 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joalheria Artesanal | Ourives</title>
+    <title>Joalheria Artesanal | Anima Libera</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">Ouro & Arte</div>
+        <div class="logo">Anima Libera</div>
         <nav>
-            <a href="#sobre">Os Artes„os</a>
-            <a href="#galeria">ColeÁıes</a>
-            <a href="#contato">OrÁamentos</a>
+            <a href="#sobre">Os Artes√£os</a>
+            <a href="#galeria">Cole√ß√µes</a>
+            <a href="#contato">Or√ßamentos</a>
         </nav>
     </header>
 
     <section id="sobre" class="hero">
         <div class="hero-text">
-            <h2>TradiÁ„o e Precis„o em Cada Detalhe</h2>
-            <p>Nossos artes„os dedicam suas vidas ‡ arte da ourivesaria, transformando metais nobres e pedras preciosas em joias exclusivas. Cada anel, colar e pulseira carrega uma histÛria de dedicaÁ„o e maestria.</p>
+            <h2>Tradi√ß√£o e Precis√£o em Cada Detalhe</h2>
+            <p>Nossos artes√£os dedicam suas vidas √† arte da ourivesaria, transformando metais nobres e pedras preciosas em joias exclusivas. Cada anel, colar e pulseira carrega uma hist√≥ria de dedica√ß√£o e maestria.</p>
         </div>
-        <!-- Adicione uma foto dos artes„os trabalhando na pasta img -->
-        <img src="img/artesaos.jpg" alt="Artes„os trabalhando" class="hero-img">
+        <img src="img/artesaos.jpg" alt="Artes√£os trabalhando" class="hero-img">
     </section>
 
     <section id="galeria">
-        <h2>Nossas PeÁas</h2>
+        <h2>Nossas Pe√ßas</h2>
         <div class="grid-galeria">
-            <!-- Substitua os caminhos pelas suas imagens na pasta img -->
-            <div class="item"><img src="img/joia1.jpg" alt="Anel de Esmeralda"></div>
-            <div class="item"><img src="img/joia2.jpg" alt="Colar de Diamantes"></div>
-            <div class="item"><img src="img/joia3.jpg" alt="AlianÁas de Ouro"></div>
-            <div class="item"><img src="img/joia4.jpg" alt="Brinco de Rubi"></div>
+            
+            <div class="item">
+                <img src="img/joia1.jpg" alt="Anel de Esmeralda">
+                <h3>Anel de Esmeralda</h3>
+                <button class="btn-whatsapp-sm" onclick="pedirOrcamento('Anel de Esmeralda')">Or√ßar esta pe√ßa</button>
+            </div>
+
+            <div class="item">
+                <img src="img/joia2.jpg" alt="Colar de Diamantes">
+                <h3>Colar de Diamantes</h3>
+                <button class="btn-whatsapp-sm" onclick="pedirOrcamento('Colar de Diamantes')">Or√ßar esta pe√ßa</button>
+            </div>
+
+            <div class="item">
+                <img src="img/joia3.jpg" alt="Alian√ßas de Ouro">
+                <h3>Alian√ßas de Ouro 18k</h3>
+                <button class="btn-whatsapp-sm" onclick="pedirOrcamento('Alian√ßas de Ouro 18k')">Or√ßar esta pe√ßa</button>
+            </div>
+
+            <div class="item">
+                <img src="img/joia4.jpg" alt="Brinco de Rubi">
+                <h3>Brinco de Rubi</h3>
+                <button class="btn-whatsapp-sm" onclick="pedirOrcamento('Brinco de Rubi')">Or√ßar esta pe√ßa</button>
+            </div>
+
         </div>
     </section>
 
     <section id="contato">
-        <h2>Solicite um OrÁamento</h2>
-        <p>Gostou de alguma peÁa ou deseja encomendar uma joia exclusiva sob medida? Entre em contato conosco.</p>
+        <h2>Solicite um Or√ßamento</h2>
+        <p>Gostou de alguma pe√ßa ou deseja encomendar uma joia exclusiva sob medida? Entre em contato conosco.</p>
         
-        <!-- O link abaixo redireciona para o WhatsApp. Troque os zeros pelo n˙mero real -->
-        <a href="https://wa.me/5500000000000?text=Ol·! Gostaria de solicitar um orÁamento de uma joia." class="btn-whatsapp" target="_blank">
+        <a href="https://wa.me/5500000000000?text=Ol√°! Gostaria de solicitar um or√ßamento para uma joia da Anima Libera." class="btn-whatsapp" target="_blank">
             Falar no WhatsApp
         </a>
     </section>
 
     <footer>
-        <p>&copy; 2026 Ouro & Arte Ourivesaria. Projeto de Extens„o (PEX).</p>
+        <p>&copy; 2026 Anima Libera Ourivesaria. Site criado por Yuri Rodrigues.</p>
     </footer>
 
+    <script>
+        function pedirOrcamento(nomeDaPeca) {
+            // Substitua pelo n√∫mero da empresa (Exemplo usando c√≥digo do Brasil e DDD)
+            const numeroEmpresa = "5500000000000"; 
+            
+            // Monta a mensagem personalizada com o nome Anima Libera
+            const mensagem = `Ol√°! Estava olhando o site da Anima Libera e gostaria de solicitar um or√ßamento para a seguinte pe√ßa: *${nomeDaPeca}*.`;
+            
+            // Codifica a mensagem para o formato de link (URL)
+            const mensagemCodificada = encodeURIComponent(mensagem);
+            
+            // Abre o WhatsApp em uma nova aba
+            window.open(`https://wa.me/${numeroEmpresa}?text=${mensagemCodificada}`, '_blank');
+        }
+    </script>
 </body>
 </html>
